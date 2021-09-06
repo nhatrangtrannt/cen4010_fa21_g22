@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Statistical Analysis</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#page-top">Home</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#about">About</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#services">Services</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead d-flex">
+    <div class="container text-center my-auto">
+      <h1 class="mb-1">Welcome to CalApp</h1>
+      <h3 class="mb-5">
+        <em>A JavaScript-based “app” that performs a simple statistical analysis</em>
+      </h3>
+      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+    </div>
+    <div class="overlay"></div>
+  </header>
+
+  <!-- About -->
+  <section class="content-section bg-light" id="about">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>A Free Bootstrap Theme by Start Bootstrap</h2>
+          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="content-section bg-primary text-white text-center" id="services">
+    <div class="container">
+      <div class="content-section-heading">
+        <h3 class="text-secondary mb-0">Services</h3>
+        <h2 class="mb-5">What We Offer</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="icon-screen-smartphone"></i>
+          </span>
+          <h4>
+            <strong>Min and Max</strong>
+          </h4>
+          <p class="text-faded mb-0">Finding the largest and smallest values</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="icon-pencil"></i>
+          </span>
+          <h4>
+            <strong>Range</strong>
+          </h4>
+          <p class="text-faded mb-0">Finding the difference between the largest and smallest values.</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="icon-like"></i>
+          </span>
+          <h4>
+            <strong>Mean</strong>
+          </h4>
+          <p class="text-faded mb-0">Finding the average of all values
+        </p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="icon-mustache"></i>
+          </span>
+          <h4>
+            <strong>Median</strong>
+          </h4>
+          <p class="text-faded mb-0">Finding the middle value in the list of numbers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Callout -->
+  <section class="callout">
+    <div class="container text-center">
+      <h2 class="mx-auto mb-5">Enter three numbers</h2>
+        <div>
+            <p class="lead mb-5"><form id="myForm">
+      <label>
+        <input type="number" id="num1" placeholder="Number 1" autofocus>
+      </label>
+      <label>
+        <input type="number" id="num2" placeholder="Number 2"> 
+      </label>
+        <label>
+        <input type="number" id="num3" placeholder="Number 3"> 
+        </label>
+            <br>
+            <p class="btn btn-dark btn-xl js-scroll-trigger">
+                <button type="button" id="Calculate1" onclick= myMax()><strong>MAXIMUM</strong></button>
+        <button type="button" id="Calculate2" onclick= myMin()><strong>MINIMUM</strong></button>
+       <button type="button" id="Calculate3" onclick= myMean()><strong>MEAN</strong></button>
+       <button type="button" id="Calculate4" onclick= myMedian()><strong>MEDIAN</strong></button>
+        <button type="button" id="Calculate5" onclick= myRange()><strong>RANGE</strong></button>
+        <button type="button" id="CalculateAll" onclick = myCal()><strong>CALCULATE ALL</strong></button>
+                </p>
+            <hr>
+<h4>
+        <div id = "max"></div>
+        <div id = "min"></div>
+        <div id = "mean"></div>
+        <div id = "median"></div>
+        <div id = "range"></div>
+            </h4>
+      </form>
+        </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="content-section bg-primary text-white">
+    <div class="container text-center">
+      <h2 class="mb-4">Thanks for using the app 
+          <p>Have a great day! </p></h2>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p class="text-muted small mb-0">Copyright &copy; Your Website 2020</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/stylish-portfolio.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
