@@ -25,7 +25,6 @@ In the Milestone 1, we're missing Admin Use case. Speaking of it, we decide to a
     - Admin can see, delete, and edit patient's information such as first name, last name, birthdate, phone number, location, gender, insurance, email, and their doctor
     - Admin can see patient's medical history
     - Admin can see all the doctors and their information
-    - Admin can add doctor 
     - Admin can see, delete, and edit doctor's information such as first name, last name, birthdate, phone number, location, gender, insurance, email, and license number
     - Admin can add doctor 
     - The system shall have buttons for Admin to click on to see patient and doctor's information
