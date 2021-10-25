@@ -4,19 +4,28 @@ session_start();
  
 // Check if the user is already logged in, if yes then direct to welcome page
 if (isset($_SESSION["loggedin"])){
-    header("location: welcome.php");
+    if ($_SESSION["role"] == "admin"){
+        header("Location: class/Admin.php");
+    } elseif ($_SESSION["role"] == "doctor"){
+        header("Location: class/Doctor.php");
+    } elseif ($_SESSION["role"] == "patient"){
+        header("Location: class/Patient.php");
+    }
+    //header("location: welcome.php");
     exit;
 }
  
-// Include config file
-require_once "config.php";
+// Include config file and function file
+require_once "config/config.php";
+require_once "functions/loginfunc.php";
 // Initialize empty variables to check error
-$usernameError = $passwordError = $loginError = "";
+$usernameError = $passwordError = $loginError = $roleError = "";
 
 // Processing data when submit button is pressed
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $role = $_POST['role'];
  
     // Validate username
     if (empty(trim($_POST["username"]))){
@@ -27,11 +36,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if (empty(trim($_POST["password"]))){
         $passwordError = "Passoword is required";
     } 
+
+    // Validate role
+    if (empty($_POST["role"])){
+        $loginError = "Role is required";
+    }
+
     
     // If there is no error, then check if username is in database. If yes, then check password that is hashed
-    if ($usernameError == "" && $passwordError == ""){
+    if ($usernameError == "" && $passwordError == "" && $loginError == ""){
+        // Check role to look up in the database
+        $loginTable = login($role);
         // SELECT statement
-        $sql = "SELECT username, password FROM signup WHERE username = ?";
+        $sql = "SELECT username,password FROM ".$loginTable." WHERE username = ?";
         $stmt = mysqli_stmt_init($conn);
         // If connection fails
         if (!mysqli_stmt_prepare($stmt,$sql)){
@@ -59,17 +76,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                         session_start();
                         // Store data in session variables
                         $_SESSION["loggedin"] = true;
-                        $$_SESSION["username"] = $username; 
-                        // Direct user to welcome page
-                        header("Location: welcome.php");
+                        $_SESSION["username"] = $username; 
+                        $_SESSION["role"] = $role; 
+                        // Direct user to welcome page depending on role
+                        if ($role == "admin"){
+                            header("Location: class/Admin.php");
+                        } elseif ($role == "doctor"){
+                            header("Location: class/Doctor.php");
+                        } elseif ($role == "patient"){
+                            header("Location: class/Patient.php");
+                        }
                     }      
                     else{
                         // password not match
-                        $loginError = "Invalid password";
+                        $loginError = "Incorrect username or password";
                     }
                 }
             }else{
-                $loginError = "Invalid username";
+                $loginError = "Incorrect username or password";
                     
             }
             // Close statement and connection
@@ -138,6 +162,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="password" name="password" class="form-control <?php echo (!empty($passwordError)) ? 'is-invalid' : ''; ?>">
                 <span class="invalid-feedback"><?php echo $passwordError; ?></span>
             </div>
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="role" value="admin">
+                <label class="form-check-label">Admin</label>
+                </div>
+            
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="role" value="doctor">
+                <label class="form-check-label">Doctor</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="role" value="patient">
+                <label class="form-check-label">Patient</label>
+                </div>
+            </div>
+            
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>

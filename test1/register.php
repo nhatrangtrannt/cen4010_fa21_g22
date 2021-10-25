@@ -1,6 +1,6 @@
 <?php
 // Include config 
-require_once "config.php";
+require_once "config/config.php";
  
 # If submit button is pressed, then validate the input
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     // If there is no error, then check if username exists in the database. If everything is good, then push data to database
     if ($usernameError == "" && $passwordError == "" && $confirmPasswordErr == "") {
     // SELECT statement
-        $sql = "SELECT username FROM signup WHERE username = ?";
+        $sql = "SELECT username FROM patient WHERE username = ?";
         $stmt = mysqli_stmt_init($conn);
         # If connection fails
         if (!mysqli_stmt_prepare($stmt, $sql)){
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 $password = trim($_POST["password"]);
                 $hashedpassword = password_hash($password, PASSWORD_DEFAULT); 
                 // Store in the database 
-                $sql = "INSERT INTO signup (username, password) VALUES (?, ?)";
+                $sql = "INSERT INTO patient (username, password) VALUES (?, ?)";
                 $stmt = mysqli_stmt_init($conn);
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
                     header("Location: register.php?error=sqlerror");
