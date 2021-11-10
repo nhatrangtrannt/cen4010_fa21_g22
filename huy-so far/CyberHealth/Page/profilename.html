@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile Name</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="http://localhost:8888/CyberHealth/assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="http://localhost:8888/CyberHealth/assets/css/style.css">
+</head>
+    
+<style>
+    .lb{
+        margin-left:2rem ;
+    }
+    .imglogo{
+        height: 6rem;
+        width:6rem;
+        outline: none;
+        border: 1px solid black;
+        border-radius: 50%;
+        display: block; 
+        margin-left: auto; 
+        margin-right: auto;
+        margin-top: 1rem;
+    }
+    h5{
+        font-size: 1rem;
+        margin-left: 3rem;
+    }
+    h4{
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        display: block; 
+        margin-left: auto; 
+        margin-right: auto;
+    }
+</style>
+    
+<body>
+
+    <div> </div>
+    <div class="container" style="width:80rem;">
+        <div class="row">
+         <div class="col-5" style="height: 55rem;width:30rem;">
+            <div class="row" style="height: 7rem;background: white;">
+                <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="imglogo">
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h4>Patient Name</h4>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h4>Status</h4>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Name:</h5>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Gender:</h5>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Location:</h5>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Phone number:</h5>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Insumance:</h5>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Doctor assigned:</h5>
+            </div>
+
+
+            <div class="row" style="height: 2rem;width:30rem;"></div>
+            <div class="row" style="height: 7rem;background: white;">
+                <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="imglogo">
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h4>Doctor Name</h4>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Gender:</h5>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Location:</h5>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Phone number:</h5>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Email:</h5>
+            </div>
+
+         </div>
+
+        <div class="col-1"></div>
+
+         <div class="col-6"  style="height: 55rem;border: 1px solid black ;background: white; ">
+            <div style="margin:1rem 0 2rem 0;">
+                <button type="button" class="btn btn-success"style="display: inline-block;" >Treatment</button>
+                <button type="button" class="btn btn-danger"  style="float: left;margin-right: 0.5rem;" >Profile</button>
+                <button type="button" class="btn btn-success" >Medical History</button>
+                <button type="button" class="btn btn-danger"   >Request Treatment</button>
+            </div>
+        
+            <h3>Profile</h3>
+                    <label  class="lb">First Name</label> <br>
+                    <input type="text"style="width:30rem;margin-left:2rem;" class="form-control" >
+                    <label  class="lb">Birthdate</label> <br>
+                    <input type="date" style="width:30rem;margin-left:2rem;" class="form-control" >
+                    <label  class="lb">Location</label> <br>
+                    <input type="text"style="width:30rem;margin-left:2rem;" class="form-control" >
+                    <label class="lb">Insurance</label> <br>
+                    <input type="text"style="width:30rem;margin-left:2rem;" class="form-control" >
+                    <label class="lb" >Last Name</label> <br>
+                    <input type="text" style="width:30rem;margin-left:2rem;" class="form-control" >
+                    <label class="lb" >Phone number</label> <br>
+                    <input type="text" style="width:30rem;margin-left:2rem;" class="form-control" >
+                    <label class="lb">Gender</label> <br>
+                        <input class="form-check-input" name="check"  type="radio" style="margin-left:2rem;">
+                        <label class="form-check-label" for="inlineRadio1" style="margin-left:3.5rem;" >Male</label> 
+                        <input class="form-check-input" name="check" type="radio" style="margin-left:1rem;" >
+                        <label class="form-check-label" for="inlineRadio1" style="margin-left:3rem;">Female</label>
+                        <input class="form-check-input" name="check" type="radio" style="margin-left:1rem;" >
+                        <label class="form-check-label" for="inlineRadio1" style="margin-left:3rem;">Others</label>
+                    <br>
+                    <label class="lb" >Email</label> <br>
+                    <input type="text" style="width:30rem;margin-left:2rem;" class="form-control" > <br>
+                    <button type="button" class="btn btn-success"style="display: inline-block;margin-left:6rem;" >Update</button>
+                    <button type="button" class="btn btn-danger"  style="float: left;margin-left:8rem;" >Cancel</button>
+        </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="http://localhost:8888/CyberHealth/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="http://localhost:8888/CyberHealth/assets/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

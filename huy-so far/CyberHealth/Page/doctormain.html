@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Doctor Main</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    
+    
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="http://localhost:8888/CyberHealth/assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="http://localhost:8888/CyberHealth/assets/css/style.css">
+    <!-- link js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+    
+    
+    
+<style>
+    .lb{
+        margin-left:2rem ;
+    }
+    .imglogo{
+        height: 6rem;
+        width:6rem;
+        outline: none;
+        border: 1px solid black;
+        border-radius: 50%;
+        display: block; 
+        margin-left: auto; 
+        margin-right: auto;
+        margin-top: 1rem;
+    }
+    h5{
+        font-size: 1rem;
+        margin-left: 3rem;
+    }
+    h4{
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        display: block; 
+        margin-left: auto; 
+        margin-right: auto;
+    }
+    .img_edit
+    {
+        width:2rem;
+        height:2rem;
+    }
+    #btn_edit{
+        display: block; 
+        margin-left: auto; 
+        margin-right: auto;
+    }
+</style>
+    
+    
+<body>
+    
+    <div class="container" style="width:80rem;">
+        <div class="row">
+         <div class="col-5" style="height: 55rem;width:30rem;">
+            <div class="row" style="height: 7rem;background: white;">
+                <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="imglogo">
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h4>Doctor Name</h4>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Name:</h5>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Gender:</h5>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Location:</h5>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Phone number:</h5>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>Insurance accepted:</h5>
+            </div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h5>License number:</h5>
+            </div>
+
+
+            <div class="row" style="height: 2rem;width:30rem;"></div>
+            <div class="row" style="height: 3rem;background: white;">
+                <h4>Custommer Service</h4>
+            </div>
+            <div class="row" style="height: 22rem;background: white;">
+                <p> some text </p>
+            </div>
+
+         </div>
+
+        <div class="col-1"></div>
+
+         <div class="col-6"  style="height: 55rem;border: 1px solid black ;background: white; ">
+            <div style="margin:1rem 0 2rem 0;">
+                <button type="button" class="btn btn-success"style="display: inline-block;" >Patients</button>
+                <button type="button" class="btn btn-danger"  style="float: left;margin-right: 0.5rem;" >Profile</button>
+                <button type="button" class="btn btn-success" >Request</button>
+            </div>
+            <h3>Requests</h3>
+            <div class="table-responsive">
+                <!--Table-->
+                <table class="table">
+                  <!--Table head-->
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">View Request</th>
+                      <th scope="col">Create Prescription</th>
+                    </tr>
+                  </thead>
+                  <!--Table head-->
+                  <!--Table body-->
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Patient</td>
+                      <td>Request</td>
+                      <td>
+                        <div>
+                            <!-- Button to Open the Modal -->
+                            <button type="button" class="btn" id="btn_edit" data-toggle="modal" data-target="#myModal">
+                              <img class="img_edit" src="data:image/png;base64,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" alt="">
+                            </button>
+                          
+                            <!-- The Modal -->
+                            <div class="modal fade" id="myModal">
+                                <div class="modal-dialog modal-xl" >
+                                  <div class="modal-content" style="width:80rem;margin-left: -25rem;">
+                                
+                                  <!-- Modal Header -->
+                                  <div class="modal-header">
+                                    <h4 class="modal-title">Prescription</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  </div>
+                                  <!-- Modal body -->
+                                  <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label >Date</label> <br>
+                                                <input type="date" style="width:20rem;" class="form-control"  >
+                                                <label >First Name</label> <br>
+                                                <input type="text"style="width:20rem;" class="form-control" >
+                                                <label >Medication</label> <br>
+                                                <input type="text"style="width:20rem;" class="form-control" >
+                                                <label >Frequency</label> <br>
+                                                <input type="text"style="width:20rem;" class="form-control" >
+                                            </div>
+                                            <div class="col">
+                                                <label >Last Name</label> <br>
+                                                <input type="text"style="width:20rem;" class="form-control" >
+                                                <label >Quantily</label> <br>
+                                                <input type="text"style="width:20rem;" class="form-control" >
+                                                <label >Strangth</label> <br>
+                                                <input type="text"style="width:20rem;" class="form-control" >
+                                                <label >Pharmacy Addres</label> <br>
+                                                <input type="text"style="width:20rem;" class="form-control" >
+                                            </div>
+                                            <div class="col">
+                                                <label >Birthdate</label> <br>
+                                                <input type="date" style="width:20rem;" class="form-control"  >
+                                                <label >Route</label> <br>
+                                                <input type="text"style="width:20rem;" class="form-control" >
+                                                <label >Amount</label> <br>
+                                                <input type="text"style="width:20rem;" class="form-control" >                                    
+                                            </div>
+                                    </div>                           
+                                  </div>
+                                  
+                                  <!-- Modal footer -->
+                                  <label style="margin-left: 1rem;" >Warmings</label> <br>
+                                  <textarea style="width: 40rem;height: 10rem;margin-left: 1rem;"> </textarea>  
+                                  <div class="modal-footer">           
+                                    <button type="button" class="btn btn-success" data-dismiss="modal">Submit</button>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>             
+                          </div>
+                        
+                      </td>
+                    </tr>
+                  </tbody>
+                  <!--Table body-->
+                </table>
+                <!--Table-->
+              </div>
+        </div>
+        </div>
+
+    <!-- JS -->
+    <script src="http://localhost:8888/CyberHealth/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="http://localhost:8888/CyberHealth/assets/js/main.js"></script>
+        
+    </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+    
+    </html>
