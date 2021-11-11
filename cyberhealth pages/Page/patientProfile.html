@@ -9,9 +9,27 @@
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="http://localhost:8888/CyberHealth/assets/css/patientProfile.css">
-</head>
+    <link rel="stylesheet" href="http://localhost:8888/CyberHealth/assets/css/doctorProfile.css">
+        <meta charset="utf-8">
+    <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
+    <!--  All snippets are MIT license http://bootdey.com/license -->
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+ <style>
+     body {
+    margin: 10;
+    padding-top: 40px;
+    color: #002D62;
+    background: #3E8EDE;
+    position: relative;
+    height: 100%;
+}
+</style>  
+    
+</head>
 <body>
 <div class="container">
 <div class="row gutters">
@@ -24,32 +42,49 @@
 				<div class="user-avatar">
 					<img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
 				</div>
-				<h5 class="user-name">Yuki Hayashi</h5>
-				<h6 class="user-email">yuki@Maxwell.com</h6>
+				<h5 class="user-name">ShangChi</h5>
+				<h6 class="user-email">ShangChi@avengers.com</h6>
 			</div>
 			<div class="about">
 				<h5>Doctor Assigned</h5>
-							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-			</div>
+						
 			</div>
             <div class="user-profile">
 				<div class="user-avatar">
 					<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Maxwell Admin">
 				</div>
 				<h5 class="user-name">Dr.Strange</h5>
-				<h6 class="user-email">strange@aventure.com</h6>
+				<h6 class="user-email">strange@avengers.com</h6>
 			</div>
            
 		</div>
 	</div>
 </div>
 </div>
-<div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+<div class="col-xl- col-lg-9 col-md-12 col-sm-12 col-12">
+<div class="card h-100">
+    
+         
+        <div class="col-sm-12">
+            <ul class="nav nav-tabs" id="myTab">
+                <li class="active"><a href="#home" data-toggle="tab">Personal Infomation</a></li>
+                <li><a href="#messages" data-toggle="tab">Case Infomation</a></li>
+                
+                
+                
+<!-- SETTING TAB
+                <li><a href="#settings" data-toggle="tab">Settings</a></li> -->
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="home">
+                    <div class="table-responsive">
+<div class="col-xl-9">
 <div class="card h-100">
 	<div class="card-body">
-        <div class="row gutters">
+                <div class="row gutters">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<h5 class="mt-3 mb-2 text-primary">Account information</h5>
+				<h3 class="mt-3 mb-2 text-primary">Account information</h3>
 			</div>
 			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 				<div class="form-group">
@@ -67,23 +102,17 @@
 			</div>
 		</div>
         
-        
 		<div class="row gutters">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<h5 class="mb-2 text-primary">Personal Details</h5>
+				<h3 class="mb-2 text-primary">Personal Details</h3>
 			</div>
 			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 				<div class="form-group">
-					<label for="firstName">First Name</label>
+					<label for="firstName">Name</label>
 					<input type="text" class="form-control" id="firstName" placeholder="">
 				</div>
 			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-				<div class="form-group">
-					<label for="lastName">Last Name</label>
-					<input type="text" class="form-control" id="lastName" placeholder="">
-				</div>
-			</div>
+	
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 				<div class="form-group">
 					<label for="Gender">Gender</label>
@@ -102,12 +131,7 @@
 					<input type="text" class="form-control" id="phone" placeholder="">
 				</div>
 			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-				<div class="form-group">
-					<label for="birthday">Birthday</label>
-					<input type="data" class="form-control" id="birthday" placeholder="">
-				</div>
-			</div>
+	
             			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 				<div class="form-group">
 					<label for="Street">Street</label>
@@ -132,18 +156,20 @@
 					<input type="text" class="form-control" id="zip" placeholder="">
 				</div>
 			</div>
-            			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 				<div class="form-group">
-					<label for="insurance">Insurance Number</label>
-					<input type="text" class="form-control" id="insurance" placeholder="">
+					<label for="insurance">Frequency</label>
+					<input type="text" class="form-control" id="frequency" placeholder="">
 				</div>
 			</div>
 		</div>
         
+        
+
 		<div class="row gutters">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 		
-				<h5 class="mt-3 mb-2 text-primary">Medical record</h5>
+				<h3 class="mt-3 mb-2 text-primary">Medical record</h3>
 			</div>
             
 			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -217,6 +243,335 @@
                                     
 			</div>
             
+            
+
+        
+           
+            
+		</div>
+        
+		<div class="row gutters">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="text-right">
+					<button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button>
+					<button type="button" id="submit" name="submit" class="btn btn-primary">Update</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-4 text-center">
+                                <ul class="pagination" id="myPager"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/table-resp-->
+
+                    <hr>
+
+                </div>
+                <!--/tab-pane-->
+                <div class="tab-pane" id="messages">
+
+        
+            <div class="tab-content">
+                <div class="tab-pane active" id="home">
+                    <div class="table-responsive">
+
+	<div class="card-body">
+        <div class="row gutters">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<h3 class="mt-3 mb-2 text-primary">Case information</h3>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="Street">Patient Name</label>
+					<input type="patientName" class="form-control" id="patientName" placeholder="">
+				</div>
+			</div>
+		
+		
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="doctorName">Doctor Name</label>
+					<input type="text" class="form-control" id="doctorName" placeholder="">
+				</div>
+			</div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="caseStatus">Case ID</label>
+					<input type="" class="form-control" id="caseId" placeholder="">
+				</div>
+			</div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="caseId">Case Status</label>
+					<input type="text" class="form-control" id="caseId" placeholder="">
+				</div>
+			</div>
+            
+		</div>
+        
+
+            
+            <div class="row gutters">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<h3 class="mb-2 text-primary">Prescription Form</h3>
+			</div>
+               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="firstName">Date</label>
+					<input type="date" class="form-control" id="firstName" placeholder="">
+				</div>
+			</div>   
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<h4 class="mb-2 text-primary">Patient Infomation</h4>
+			</div>
+    
+                        
+        
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="firstName">First Name</label>
+					<input type="text" class="form-control" id="firstName" placeholder="">
+				</div>
+			</div>
+		
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="birthday">Last Name</label>
+					<input type="data" class="form-control" id="birthday" placeholder="">
+				</div>
+			</div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="birthday">Age</label>
+					<input type="data" class="form-control" id="birthday" placeholder="">
+				</div>
+			</div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="birthday">Gender</label>
+					<input type="data" class="form-control" id="birthday" placeholder="">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="eMail">Email</label>
+					<input type="email" class="form-control" id="email" placeholder="">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="phone">Phone</label>
+					<input type="text" class="form-control" id="phone" placeholder="">
+				</div>
+			</div>
+	
+            			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="Street">Street</label>
+					<input type="name" class="form-control" id="street" placeholder="">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="ciTy">City</label>
+					<input type="name" class="form-control" id="cit" placeholder="">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="sTate">State</label>
+					<input type="text" class="form-control" id="state" placeholder="">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="zIp">Zip Code</label>
+					<input type="text" class="form-control" id="zip" placeholder="">
+				</div>
+			</div>
+            			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance">Insurance Number</label>
+					<input type="text" class="form-control" id="insurance" placeholder="">
+				</div>
+			</div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<h4 class="mb-2 text-primary">Pharmacy Infomation</h4>
+			</div>
+
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="firstName">Pharmacy Name</label>
+					<input type="text" class="form-control" id="firstName" placeholder="">
+				</div>
+			</div>
+	
+ 
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="eMail">Email</label>
+					<input type="email" class="form-control" id="email" placeholder="">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="phone">Phone</label>
+					<input type="text" class="form-control" id="phone" placeholder="">
+				</div>
+			</div>
+	
+            			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="Street">Street</label>
+					<input type="name" class="form-control" id="street" placeholder="">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="ciTy">City</label>
+					<input type="name" class="form-control" id="cit" placeholder="">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="sTate">State</label>
+					<input type="text" class="form-control" id="state" placeholder="">
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="zIp">Zip Code</label>
+					<input type="text" class="form-control" id="zip" placeholder="">
+				</div>
+			</div>
+            		
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<h4 class="mb-2 text-primary">Prescription Detail</h4>
+			</div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance"> Medication 1 </label>
+					<input type="text" class="form-control" id="medicationName" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance">Quantity</label>
+					<input type="text" class="form-control" id="quantity" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance">Route</label>
+					<input type="text" class="form-control" id="route" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance">Frequency</label>
+					<input type="text" class="form-control" id="frequency" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance">Strength</label>
+					<input type="text" class="form-control" id="strength" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance">Note</label>
+					<input type="text" class="form-control" id="insurance" placeholder="">
+				</div>
+			</div>
+            
+          
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <br>
+                
+				<div class="form-group">
+					<label for="insurance">Medication 2</label>
+					<input type="text" class="form-control" id="medicationName" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <br>
+				<div class="form-group">
+					<label for="insurance">Quantity</label>
+					<input type="text" class="form-control" id="quantity" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance">Route</label>
+					<input type="text" class="form-control" id="route" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance">Frequency</label>
+					<input type="text" class="form-control" id="frequency" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance">Strength</label>
+					<input type="text" class="form-control" id="strength" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance">Note</label>
+					<input type="text" class="form-control" id="insurance" placeholder="">
+				</div>
+			</div>
+                        
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <br>
+				<div class="form-group">
+					<label for="insurance">Medication 3</label>
+					<input type="text" class="form-control" id="medicationName" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <br>
+				<div class="form-group">
+					<label for="insurance">Quantity</label>
+					<input type="text" class="form-control" id="quantity" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance">Route</label>
+					<input type="text" class="form-control" id="route" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance">Frequency</label>
+					<input type="text" class="form-control" id="frequency" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance">Strength</label>
+					<input type="text" class="form-control" id="strength" placeholder="">
+				</div>
+			</div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+				<div class="form-group">
+					<label for="insurance">Note</label>
+					<input type="text" class="form-control" id="insurance" placeholder="">
+				</div>
+			</div>           
+		</div>
+        
            
             
 		</div>
@@ -233,14 +588,118 @@
 </div>
 </div>
 </div>
+                 
+                    </div>
+                    <!--/table-resp-->
+
+                    <hr>
+
+                </div>
+
+            </div>
+
+                </div>
+                <!--/tab-pane
+                <div class="tab-pane" id="settings">
+
+                    <hr>
+                    <form class="form" action="##" method="post" id="registrationForm">
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="first_name">
+                                    <h4>First name</h4></label>
+                                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="last_name">
+                                    <h4>Last name</h4></label>
+                                <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                            </div>
+                        </div>
+                        
+                         <div class="form-group">
+                            <div class="col-xs-6">
+                                <label for="license">
+                                    <h4>License Number</h4></label>
+                                <input type="text" class="form-control" name="license" id="license" placeholder="license number" title="enter your license number.">
+                            </div>
+                        </div>
+                     <div class="form-group">
+                            <div class="col-xs-6">
+                                <label for="license">
+                                    <h4>Insurance Accepting</h4></label>
+                                <input type="text" class="form-control" name="insuranceAccepting" id="insuranceAccepting" placeholder="Humana, Bluecross, Oscar" title="enter your insurance accepting.">
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="phone">
+                                    <h4>Phone</h4></label>
+                                <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-6">
+                                <label for="mobile">
+                                    <h4>Mobile</h4></label>
+                                <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="email">
+                                    <h4>Email</h4></label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="email">
+                                    <h4>Location</h4></label>
+                                <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="password">
+                                    <h4>Password</h4></label>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="col-xs-6">
+                                <label for="password2">
+                                    <h4>Verify</h4></label>
+                                <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <br>
+                                <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                                <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>-->
+
+            </div>
+            <!--/tab-pane-->
+        </div>   
     
-<style>
-     body {
-    margin: 10;
-    padding-top: 40px;
-    color: #002D62;
-    background: #3E8EDE;
-    position: relative;
-    height: 100%;
-}
-</style>
+
+    
+  
