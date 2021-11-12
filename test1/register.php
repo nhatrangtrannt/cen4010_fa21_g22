@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     // Execute prepared statement   
                     mysqli_stmt_execute($stmt);
                     // Direct to Login page 
-                    header("Location: login.php");
+                    header("Location: login.php?");
                     // Close statement and connection
                     mysqli_stmt_close($stmt);
                     mysqli_close($conn);
